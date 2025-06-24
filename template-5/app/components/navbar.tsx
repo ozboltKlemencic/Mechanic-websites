@@ -49,19 +49,19 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToHero, scrollToServices, scrollT
             <button onClick={() => { scrollToHero(); handleCloseMenu(); }} className="group-hover:text-white text-white/90">
               DOMOV
             </button>
-            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-5-custom-orange transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-[#4169E1] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li className="relative group px-1 pb-1">
             <button onClick={() => { scrollToServices(); handleCloseMenu(); }} className="group-hover:text-white text-white/90">
               STORITVE
             </button>
-            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-5-custom-orange transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-[#4169E1] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li className="relative group px-1 pb-1">
             <button onClick={() => { scrollToContact(); handleCloseMenu(); }} className="group-hover:text-white text-white/90">
               KONTAKT
             </button>
-            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-5-custom-orange transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            <span className="absolute rounded-lg bottom-0 left-1/2 w-0 h-[2px] bg-[#4169E1] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </li>
         </ul>
 
@@ -79,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToHero, scrollToServices, scrollT
           <button className="absolute top-4 right-4 text-white text-3xl" onClick={() => setIsMenuOpen(false)}>
             <IoCloseOutline />
           </button>
-          <ul className="text-white font-poppins text-2xl mt-16">
+          <ul className="text-white flex flex-col justify-center items-center font-poppins text-2xl mt-16 text-center w-full">
             <li className="py-4">
               <button onClick={() => { scrollToHero(); handleCloseMenu(); }} className="text-white/90">DOMOV</button>
             </li>
