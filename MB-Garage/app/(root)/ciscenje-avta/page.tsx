@@ -361,7 +361,7 @@ const CiscenjeAvta = () => {
                   viewport={{ once: true }}
                   className="text-left font-montserrat text-lg font-semibold text-black md:text-xl lg:text-2xl"
                 >
-                  Zakaj Izbrati Ciscenje Avtomobila v AS Klemencič?
+                  Zakaj Izbrati Ciscenje Avtomobila v MB Garage?
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, x: -5 }}
