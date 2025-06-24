@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s - MB garage",
   },
   description:
-    "MB garage, avtomehanična delavnica Miroslav Beronja nudi vrhunske avtomehanične storitve v Blejski Dobravi. Specializirani smo za popravila motorjev, vzdrževanje vozil in diagnostiko.",
+    "MB garage, avtomehanična delavnica Miroslav Beronja nudi vrhunske avtomehanične storitve v Blejski Dobravi. Specializirani smo za menjavo gum, vzdrževanje vozil in diagnostiko.",
   keywords:
     "avtomehanik, avtomehanična delavnica, MB garage, Blejska Dobrava, popravilo avtomobila, vzdrževanje vozil, diagnostika, servis motorja, avtomehanične storitve, Miroslav Beronja, avtomehanik Blejska Dobrava, popravilo motorja, vzdrževanje avta Blejska Dobrava",
   twitter: { card: "summary_large_image" },

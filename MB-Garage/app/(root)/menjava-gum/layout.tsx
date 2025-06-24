@@ -1,21 +1,21 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Avtomehanične storitve - MB garage, Blejska Dobrava",
+  title: "Menjava gum - MB garage, Blejska Dobrava",
   description:
-    "MB garage nudi vrhunske avtomehanične storitve v Blejski Dobravi. Specializirani smo za popravila motorjev, vzdrževanje vozil, diagnostiko in druge avtomehanične storitve. Naročite se še danes!",
+    "Potrebujete hitro in zanesljivo menjavo gum? MB garage nudi vulkanizerske storitve v Blejski Dobravi. Poskrbimo za strokovno menjavo in centriranje gum. Naročite se še danes!",
   keywords:
-    "avtomehanične storitve, popravilo motorja, vzdrževanje vozil, diagnostika, MB garage Blejska Dobrava, avtomehanična delavnica, servis motorja, popravilo avta, hitra avtomehanična storitev, ugodne avtomehanične storitve",
+    "menjava gum, vulkanizer, centriranje gum, menjava gum Blejska Dobrava, vulkanizer Blejska Dobrava, menjava pnevmatik, hitra menjava gum, ugodna menjava gum, vulkanizerske storitve",
   twitter: {
     card: "summary_large_image",
-    title: "Avtomehanične storitve - MB garage",
+    title: "Menjava gum - MB garage",
     description:
-      "Potrebujete zanesljive avtomehanične storitve? MB garage je specialist za popravila motorjev in vzdrževanje vozil v Blejski Dobravi. Naročite se zdaj!",
+      "Potrebujete hitro in zanesljivo menjavo gum? MB garage je specialist za vulkanizerske storitve v Blejski Dobravi. Naročite se zdaj!",
   },
   openGraph: {
-    title: "Avtomehanične storitve - MB garage, Blejska Dobrava",
+    title: "Menjava gum - MB garage, Blejska Dobrava",
     description:
-      "Poiščite strokovne avtomehanične storitve pri MB garage. Nudimo vrhunske storitve popravil motorjev, vzdrževanja vozil in diagnostike. Obiščite nas v Blejski Dobravi.",
+      "Poiščite strokovno menjavo gum pri MB garage. Nudimo vrhunske vulkanizerske storitve, kot so centriranje gum in hitre menjave. Obiščite nas v Blejski Dobravi.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/menjava-gum`,
     siteName: "MB garage",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/menjava-gum.jpg`,
         width: 1200,
         height: 630,
-        alt: "Avtomehanične storitve - MB garage",
+        alt: "Menjava gum - MB garage",
       },
     ],
     locale: "sl_SI",

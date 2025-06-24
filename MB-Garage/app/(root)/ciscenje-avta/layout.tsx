@@ -1,21 +1,21 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vzdrževanje vozil - MB garage, Blejska Dobrava",
+  title: "Čiščenje avta - MB garage, Blejska Dobrava",
   description:
-    "Celovito vzdrževanje vašega avtomobila v MB garage. Nudimo notranje in zunanje vzdrževanje vozil, popravila motorjev in diagnostiko v Blejski Dobravi. Poskrbimo, da bo vaš avto kot nov!",
+    "Profesionalno čiščenje vašega avtomobila v MB garage. Nudimo notranje in zunanje čiščenje vozil v Blejski Dobravi. Poskrbimo, da bo vaš avto kot nov!",
   keywords:
-    "vzdrževanje vozil, popravilo motorja, diagnostika avta, servis avtomobila, MB garage Blejska Dobrava, avtomehanična delavnica, vzdrževanje avta, popravilo avta, celovito vzdrževanje, servis motorja Blejska Dobrava",
+    "čiščenje avta, notranje čiščenje avta, zunanje čiščenje avta, pranje avtomobila, MB garage Blejska Dobrava, čiščenje vozil, detajlno čiščenje, avtopralnica, čiščenje avta Blejska Dobrava",
   twitter: {
     card: "summary_large_image",
-    title: "Vzdrževanje vozil - MB garage",
+    title: "Čiščenje avta - MB garage",
     description:
-      "Zagotovite dolgotrajno delovanje svojega vozila! Oglejte si naše storitve vzdrževanja vozil v Blejski Dobravi.",
+      "Zasijajte s čistim vozilom! Oglejte si naše storitve čiščenja avtomobilov v Blejski Dobravi.",
   },
   openGraph: {
-    title: "Vzdrževanje vozil - MB garage, Blejska Dobrava",
+    title: "Čiščenje avta - MB garage, Blejska Dobrava",
     description:
-      "Poskrbite za optimalno delovanje svojega avtomobila z našimi storitvami vzdrževanja vozil in popravil motorjev. Zanesljivo vzdrževanje v Blejski Dobravi.",
+      "Poskrbite za čistočo svojega avtomobila z našimi storitvami notranjega in zunanjega čiščenja. Profesionalno čiščenje avta v Blejski Dobravi.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/ciscenje-avta`,
     siteName: "MB garage",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/ciscenje-avta.jpg`,
         width: 1200,
         height: 630,
-        alt: "Vzdrževanje vozil - MB garage",
+        alt: "Čiščenje avta - MB garage",
       },
     ],
     locale: "sl_SI",
