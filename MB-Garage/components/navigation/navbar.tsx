@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { BsTelephone } from "react-icons/bs";
-import { FaRegPaperPlane, FaRegClock } from "react-icons/fa";
+import { FaRegPaperPlane, FaRegClock, FaPhone } from "react-icons/fa";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { LiaFacebookSquare, LiaInstagram } from "react-icons/lia";
 
@@ -13,6 +13,7 @@ import ROUTES from "@/constants/routes";
 import ContaktBox from "./contaktBox";
 import NavLinks from "./navLink";
 import SocialIcon from "./socialIcon";
+import PrimaryBtn from "../buttons/PrimaryBtn";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -36,13 +37,111 @@ const Navbar = () => {
 
   useEffect(() => {
     if (isMenuOpen) {
+      // Prevent scrolling on body
       document.body.classList.add("overflow-hidden");
+      document.documentElement.classList.add("overflow-hidden");
+
+      // Store current scroll position
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+
+      // Prevent touch move events (for mobile)
+      const preventTouchMove = (e: TouchEvent) => {
+        e.preventDefault();
+      };
+
+      document.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
+
+      // Store the function to remove it later
+      (
+        document.body as HTMLElement & {
+          _preventTouchMove?: (e: TouchEvent) => void;
+          _scrollY?: number;
+        }
+      )._preventTouchMove = preventTouchMove;
+      (
+        document.body as HTMLElement & {
+          _preventTouchMove?: (e: TouchEvent) => void;
+          _scrollY?: number;
+        }
+      )._scrollY = scrollY;
     } else {
+      // Restore scrolling
       document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
+
+      // Restore scroll position
+      const scrollY =
+        (
+          document.body as HTMLElement & {
+            _preventTouchMove?: (e: TouchEvent) => void;
+            _scrollY?: number;
+          }
+        )._scrollY || 0;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      // Remove touch event listener
+      const preventTouchMove = (
+        document.body as HTMLElement & {
+          _preventTouchMove?: (e: TouchEvent) => void;
+          _scrollY?: number;
+        }
+      )._preventTouchMove;
+      if (preventTouchMove) {
+        document.removeEventListener("touchmove", preventTouchMove);
+        delete (
+          document.body as HTMLElement & {
+            _preventTouchMove?: (e: TouchEvent) => void;
+            _scrollY?: number;
+          }
+        )._preventTouchMove;
+        delete (
+          document.body as HTMLElement & {
+            _preventTouchMove?: (e: TouchEvent) => void;
+            _scrollY?: number;
+          }
+        )._scrollY;
+      }
+
+      // Restore scroll position
+      window.scrollTo(0, scrollY);
     }
 
     return () => {
+      // Cleanup on unmount
       document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      const preventTouchMove = (
+        document.body as HTMLElement & {
+          _preventTouchMove?: (e: TouchEvent) => void;
+          _scrollY?: number;
+        }
+      )._preventTouchMove;
+      if (preventTouchMove) {
+        document.removeEventListener("touchmove", preventTouchMove);
+        delete (
+          document.body as HTMLElement & {
+            _preventTouchMove?: (e: TouchEvent) => void;
+            _scrollY?: number;
+          }
+        )._preventTouchMove;
+        delete (
+          document.body as HTMLElement & {
+            _preventTouchMove?: (e: TouchEvent) => void;
+            _scrollY?: number;
+          }
+        )._scrollY;
+      }
     };
   }, [isMenuOpen]);
 
@@ -150,7 +249,7 @@ const Navbar = () => {
       <nav
         className={`fixed left-0 top-0 z-[10000] h-screen w-full bg-black transition-all duration-300 ${
           isMenuOpen
-            ? "translate-y-[4.5rem] opacity-100 lg:translate-y-24"
+            ? "translate-y-0 pt-12 opacity-100 "
             : "-translate-y-full opacity-0"
         } flex flex-col`}
         aria-label="Mobile Navigation"
@@ -159,6 +258,14 @@ const Navbar = () => {
           <ul className="flex w-full flex-col">
             <NavLinks isMobileNav onClick={handleMenuClose} />
           </ul>
+        </div>
+
+        <div className="mx-auto mb-4 mt-auto flex w-[90vw] items-center justify-center ">
+          <PrimaryBtn
+            icon={<FaPhone />}
+            text="Pokliči nas"
+            className="w-full"
+          />
         </div>
       </nav>
     </>
