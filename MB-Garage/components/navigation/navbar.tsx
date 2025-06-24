@@ -137,32 +137,29 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            <div
-              className={`transition-opacity duration-300 ${isMenuOpen ? "hidden opacity-0" : "opacity-100"}`}
-            >
-              <IoMenuOutline className="text-4xl text-white" />
-            </div>
-            <div
-              className={`transition-opacity duration-300 ${isMenuOpen ? "hidden opacity-0" : "opacity-100"}`}
-            >
-              <IoCloseOutline className="text-4xl text-white" />
-            </div>
+            {!isMenuOpen ? (
+              <IoMenuOutline className="text-4xl text-white transition-all duration-300" />
+            ) : (
+              <IoCloseOutline className="text-4xl text-white transition-all duration-300" />
+            )}
           </button>
         </nav>
       </header>
 
       {/* Mobile Menu */}
       <nav
-        className={`fixed left-0 top-0 z-[10000] h-screen w-full bg-black opacity-0 transition-transform duration-300 ${
+        className={`fixed left-0 top-0 z-[10000] h-screen w-full bg-black transition-all duration-300 ${
           isMenuOpen
             ? "translate-y-[4.5rem] opacity-100 lg:translate-y-24"
-            : "-translate-y-full"
-        } flex flex-col items-center`}
+            : "-translate-y-full opacity-0"
+        } flex flex-col`}
         aria-label="Mobile Navigation"
       >
-        <ul className=" flex w-full flex-col gap-y-3 pt-2 text-lg font-normal md:pt-20">
-          <NavLinks isMobileNav onClick={handleMenuClose} />
-        </ul>
+        <div className="flex w-full flex-col px-2 pt-8">
+          <ul className="flex w-full flex-col">
+            <NavLinks isMobileNav onClick={handleMenuClose} />
+          </ul>
+        </div>
       </nav>
     </>
   );

@@ -17,18 +17,20 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
   const isActive = (route: string) => pathname === route;
 
   return (
-    <ul className="flex flex-wrap gap-x-6 gap-y-3 font-semibold">
+    <ul
+      className={`${isMobileNav ? "flex w-full flex-col" : "flex flex-wrap gap-x-6 gap-y-3"} font-semibold`}
+    >
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.HITRI_SERVICE}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.HITRI_SERVICE) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -39,14 +41,14 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.MENJAVA_GUM}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.MENJAVA_GUM) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -57,14 +59,14 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.CISTENJE_AVTA}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.CISTENJE_AVTA) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -75,14 +77,14 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.CENIK}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.CENIK) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -93,14 +95,14 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.CONTACT.LINK}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.CONTACT.LINK) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -111,14 +113,14 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       <li
         className={`${
           isMobileNav
-            ? "w-full border-b border-white/10 py-4 text-center"
+            ? "w-full border-b border-white/20 px-8 py-6 text-center"
             : "text-center"
         }`}
         role="none"
       >
         <Link
           href={ROUTES.O_NAS}
-          className={`uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
             isActive(ROUTES.O_NAS) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
