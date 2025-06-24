@@ -18,7 +18,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
 
   return (
     <ul
-      className={`${isMobileNav ? "flex w-full flex-col" : "flex flex-wrap gap-x-6 gap-y-3"} font-semibold`}
+      className={`${isMobileNav ? "flex w-full flex-col" : "flex flex-wrap gap-x-6 gap-y-3"} px-3 py-2 text-sm font-semibold md:font-medium lg:font-semibold`}
     >
       <li
         className={`${
@@ -30,7 +30,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.HITRI_SERVICE}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.HITRI_SERVICE) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -48,7 +48,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.MENJAVA_GUM}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.MENJAVA_GUM) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -66,7 +66,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.CISTENJE_AVTA}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.CISTENJE_AVTA) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -84,7 +84,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.CENIK}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.CENIK) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -102,7 +102,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.CONTACT.LINK}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.CONTACT.LINK) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
@@ -120,7 +120,7 @@ const NavLinks = ({ isMobileNav, onClick }: Props) => {
       >
         <Link
           href={ROUTES.O_NAS}
-          className={`text-xl uppercase transition-colors duration-300 hover:text-green-400 ${
+          className={`text-base uppercase transition-colors duration-300 hover:text-green-400 lg:text-xl ${
             isActive(ROUTES.O_NAS) ? "text-green-400" : "text-white"
           }`}
           onClick={onClick}
